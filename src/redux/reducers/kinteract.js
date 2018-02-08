@@ -1,6 +1,8 @@
 /* eslint-disable no-shadow */
 const initialState = {
-  webdata: {},
+  webdata: {
+    observations: [],
+  },
 }
 
 export default function kinteract(state = initialState, action) {
