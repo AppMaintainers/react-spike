@@ -1,8 +1,9 @@
 import React from 'react'
 import Form from 'components/core/form'
+import _ from 'lodash'
 
 export default props => {
-  if (props && props.webdata && props.webdata.token && props.webdata.observations.length > 0) {
+  if (_.get(props, ['webdata.token'], NaN) && props.webdata.observations.length > 0) {
     return (
       <div>
         You are signed in
