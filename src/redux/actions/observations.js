@@ -6,7 +6,7 @@ export const updateObservations = observationsData => {
 
 export function getObservations(uuid, token) {
   return function(dispatch) {
-    return fetch(`http://localhost:3001/api/v2/observations?auth[uuid]=${uuid}&auth[token]=${token}`, {
+    return fetch(`https://kinteract-staging.herokuapp.com/api/v2/observations?auth[uuid]=${uuid}&auth[token]=${token}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

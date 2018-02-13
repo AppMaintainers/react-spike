@@ -7,7 +7,7 @@ export const updateUser = userData => {
 
 export function validateLogin(email, password) {
   return function(dispatch) {
-    return fetch('http://localhost:3001/api/v2/sessions', {
+    return fetch('https://kinteract-staging.herokuapp.com/api/v2/sessions', {
       method: 'POST',
       body: JSON.stringify({ user: { email: email, password: password } }),
       headers: {
