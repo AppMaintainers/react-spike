@@ -3,14 +3,14 @@ import Form from 'components/core/form'
 import _ from 'lodash'
 
 export default props => {
-  if (_.get(props, ['webdata.token'], NaN) && props.webdata.observations.length > 0) {
+  if (_.get(props, 'user.token', null) && _.get(props, 'observations', []).length > 0) {
     return (
       <div>
         You are signed in
 
         <br /><br />
 
-        {props.webdata.observations.map((observation, i) => (
+        {props.observations.map((observation, i) => (
           <div key={observation.uuid}>
             Observation {i} <br />
             {JSON.stringify(observation)}

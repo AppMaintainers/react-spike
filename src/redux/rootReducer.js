@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import todos from './reducers/todos'
 import user from './reducers/user'
-import kinteract from './reducers/kinteract'
+import observations from './reducers/observations'
 
 const rootReducer = combineReducers({
   todos,
   user,
-  kinteract,
+  observations,
 })
 
 export default rootReducer
