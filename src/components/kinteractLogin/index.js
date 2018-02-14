@@ -10,6 +10,17 @@ export default props => {
 
         <br /><br />
 
+        <button
+          onClick={() => {
+            window.location = `https://kinteract-staging.herokuapp.com/integrations/react/sign_ups?uuid=${props.user.uuid}&token=${props.user.token}&url=${encodeURI('https://kinteract-staging.herokuapp.com/children')}`
+          }}
+          href="#"
+        >
+          Visit your profile at Rails side
+        </button>
+
+        <br /><br />
+
         {props.observations.map((observation, i) => (
           <div key={observation.uuid}>
             Observation {i} <br />
